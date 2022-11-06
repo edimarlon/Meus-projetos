@@ -1,0 +1,225 @@
+<meta charset="UTF-8">
+<h6>
+    Capítulo 2
+</h6>
+<h3>
+        2.1 Comunique-se com o usuário
+</h3>
+<script>
+    document.write ("Olá, mundo!");
+    document.write ("<br>Esse é meu segundo programa.");
+    document.write ("<br>");
+    document.write ("Olá, mundo!");
+    document.write ("<br>");
+    document.write ("Olá, mundo!");
+    document.write ("<br>");
+    document.write ("Olá, mundo!");
+    document.write ("<br>");
+    document.write ("Olá, mundo!");
+    document.write ("<br>");
+    document.write ("Olá, mundo!");
+    document.write ("<br>");
+    document.write ("Olá, mundo!");
+    document.write ("<br>");
+    document.write ("Olá, mundo!");
+    document.write ("<br>");
+    document.write ("Olá, mundo!");
+    document.write ("<br>");
+    document.write ("Olá, mundo!");
+    document.write ("<br>");
+    document.write ("Olá, mundo!");
+    document.write ("Osadgvsdgvsdgdo!")
+</script>
+<h3>
+    2.2 Trabelhe com números
+</h3>
+<script>
+    document.write ("Minha idade é: ");
+    document.write (31);
+</script>
+<!--Quando escrevemos os números sem aspas queremos que seja encarado como uma sequencia de caracteres.-->
+<script>
+    document.write ("<br>31<br>");
+    document.write (31);
+    document.write ("<br>");
+    document.write (31+31);
+    document.write ("<br>");
+    document.write ("31"+"31")
+</script>
+<!--O processo de juntar caracteres é chamado de concatenação.A sequência de caracteres entre aspas é chamada de string.O sinal de + concatena strings e soma números.-->
+<script>
+    document.write ("<br>");
+    document.write ("Eu nasci em: ");
+    document.write (2022-32);
+    document.write ("<br>");
+    document.write ("2022-32");
+    document.write ("<br>");
+    document.write ("A soma de nossas idades é: ");
+    document.write (31+35+1);
+    document.write ("<br>");
+    document.write("A média de nossas idades é : ")
+    document.write (Math.round((31+35+1)/3))
+    document.write("<br>A minha idade é: " + 31);
+    document.write("<br>A média das nossas idades é: "+(Math.round((31+35+1)/3)));
+</script>
+<h3>
+    2.3 Revisando o seu código: Trabalhando com números
+</h3>
+<script>
+    document.write("Minha idade é: "+25);
+    document.write("<br>A soma das nossas idades é: ");
+    document.write(31+35+1)
+    document.write("<br>A média das nossas idades é: "+(Math.round((31+35+1)/3)));
+    document.write("<br>Nossa diferença de idade é: " + (31-35) + " anos.<br>");
+</script>
+<!--Dentro do "document.write();" se tem texto + operação matematica é precisa deixar a operação matematica dentro de parenteses. -->
+<script>
+    document.write("Considerando que na média os casais tem filhos por volta de 28 anos então podemos dividir o ano atual por 28 para descobrir quantas gerações existiram desde o ano 0. O que dá um total de " + (Math.round(2022/28)) + " gerações.");
+</script>
+
+<h3>
+    2.4 Organize seus dados em variáveis
+</h3>
+<script>
+    var ano = 2022;
+    var idadeEu = 31;
+    var idadeAdriano =26;
+    var idadePaulo = 32;
+    var idadeTotal = idadeEu+idadeAdriano+idadePaulo;
+    document.write("Eu nasci em "+(ano-idadeEu)+"<br>");
+    document.write("Adriano nasceu em "+(ano-idadeAdriano)+"<br>");
+    document.write("Paulo nasceu em "+(ano-idadePaulo)+"<br>");
+    document.write("A soma das idades é: "+ idadeTotal + "<br>");
+    document.write("ano <br>");
+    document.write(ano+"<br>");
+</script>
+<h3>
+    2.5 Reescrevendo a média de idade dos seus amigos
+</h3>
+<script>
+    var mediaIdades = (Math.round(idadeTotal/3));
+    document.write(Math.round(idadeTotal/3));
+    document.write("<br>A média de idades é: ")
+    document.write (mediaIdades);
+</script>
+<h3>
+    2.6 Revisando o seu código: organize-se com variáveis
+</h3>
+<h4>
+    Alcool ou gasolina?
+</h4>
+<script>
+    var tanque = 40;
+    var caminhoGasolina = 480;
+    var caminhoAlcool = 300;
+    var consumoGasolina = caminhoGasolina/tanque;
+    var consumoAlcool =caminhoAlcool/tanque;
+    document.write("O consumo de gasolina é de " + consumoGasolina + " litros por quilometro rodado.<br>");
+    document.write("O consumo de álcool é de " + consumoAlcool + " litros por quilometro rodado.<br>");
+</script>
+<h4>
+    Arredondando números: 1/7
+</h4>
+<script>
+    document.write ("Arredondamento com Math.round: ");
+    document.write (Math.round (1/7));
+    document.write ("<br>");
+    document.write ("Arredondamento com .toFixed(2): ");
+    document.write ((1/7).toFixed(2));
+</script>
+<h4>
+   Preço de consumo
+</h4>
+<script>
+    var precoGasolina=2.90;
+    var precoAlcool=2.40;
+    var precoPorKilometroGasolina =precoGasolina/consumoGasolina;
+    var precoPorKilometroAlcool =precoAlcool/consumoAlcool;
+    document.write ("O preço de consumo da gasolina é de " + precoPorKilometroGasolina.toFixed(2) +" centavos por quilometo enquando o do álcool é de " + precoPorKilometroAlcool.toFixed(2) + ".")
+</script>
+<h3>
+    2.7 Pare de escrever BR tantas vezes!
+</h3>
+<script>
+    var passaTraco = function() {
+        document.write("<hr>");
+    };
+    document.write("Eu nasci em: "+(ano-31));
+    passaTraco ();
+    document.write("Adriano nasceu em: "+(ano-36));
+    passaTraco ();
+    document.write("Rute nasceu em: "+(ano-40));
+    passaTraco ();
+</script>
+<!--O function() indica que queremos criar um novo procedimento para não ter mais de copiar e colar código.-->
+<h3>
+    2.8 Revise o código: crie sua primeira função
+</h3>
+<script>
+    var pulaLinha = function() {
+        document.write("<br><hr><br>");
+    };
+    document.write ("Eu nasci em:" + (ano -32));
+    pulaLinha ();
+    document.write ("Fulano naceu em: "+(ano-65))
+    pulaLinha();
+    document.write("Sicrano nasceu em: "+ (ano-42))
+</script>
+<h3>
+    2.9 Funções passando informações e chamando outras funções
+</h3>
+<script>
+    var mostra= function(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+   mostra ("Usando funções para melhorar o código");
+   mostra ("Nossa, assim fica bem enxuto!");
+</script>
+<h3>
+    2.10 Revise o código: usando a função mostra
+</h3>
+<!--
+    As funções com  ponto e virgula após a expressão function() não funcionam:
+
+    var pulaLinha = function(); {
+        document.write("<br>");
+    }
+    var mostra = function(frase); {
+        document.write(frase);
+        pulaLinha();
+    };
+    Em vez disso escreva sem o ponto e virgula:
+    var pulaLinha = function() {
+        document.write("<br>");
+    };
+    var mostra = function(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+-->
+<script>
+mostra ("Eu nasci em: "+(ano-32));
+mostra ("Fulano nasceu em: "+(ano-78));
+mostra ("Beltrano nasceu em: "+(ano-46));
+
+var escreva= function(frase) {
+    document.write("<big>"+ frase +"</big>");
+    passaTraco();
+};
+escreva("O Mundial é nosso!");
+</script>
+<h3>
+    2.10 Mostrando mensagens secretas, apenas para o programador
+</h3>
+<script>
+    mostra("Olá, Mundo!");
+    console.log ("Esse monte de traço é muito feio, eu sei.");
+</script>
+<h3>
+    2.12 Para saber mais: comentários
+</h3>
+<script>
+// Isso é um teste de cometários. 
+// Essa forma funciona apenas dentro do <script>.
+</script>
