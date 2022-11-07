@@ -1,0 +1,13 @@
+<meta charset="UTF-8">
+<script>
+    var mostra = function(frase) {
+        document.write(frase +"<br>" );
+    }
+    var calculaImc = function(altura,peso){
+        var imc = (peso / (altura * altura)).toFixed(2)
+        return imc;
+    };
+    var  imcJose= calculaImc(1.78,150)
+    mostra ("O imc de José é : "+ imcJose +"." );
+    mostra ("Ele está " +((imcJose - 18.5).toFixed(2))+" acima do limite de magreza.");
+</script>
