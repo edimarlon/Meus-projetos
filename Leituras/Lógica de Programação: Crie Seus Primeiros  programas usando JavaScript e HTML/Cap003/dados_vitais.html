@@ -1,0 +1,16 @@
+<meta charset="UTF-8">
+<script>
+    var nome = prompt("Bom dia, qual o seu nome?");
+    var idade = prompt ("Quantos anos você tem?");
+    var diasDeVida = idade*365;
+    var pulaLinha = function() {
+        document.write ("<br>");
+    }
+    var batidasCoracao = diasDeVida*24*60*80;
+    var escreva = function(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+    escreva (nome + ", você já viveu "+diasDeVida+ " dias. ")
+    escreva ("Seu coração já bateu "+batidasCoracao+" vezes.")
+</script>
