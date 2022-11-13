@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.1 Quantos pontos tem seu time de futebo?</title>
+</head>
+<body>
+    <script>
+        var mostra = function(texto){
+            document.write(texto);
+            document.write("<br>");
+        }
+        var nomeTime = prompt("Olá, qual o nome do seu time? ");
+        var nomeTimeRival = prompt("Olá, qual o nome do time rival? ");
+
+        var  vitorias = Number(prompt(`Quantos jogos o ${nomeTime} venceu?`));//Number é uma forma de transformar string em número.
+        
+        var  empates = parseInt(prompt(`Quantos jogos o ${nomeTime} empatou?`));//parseInt é outra forma de transformar string em número.
+
+        var  derrotas = Number(prompt(`Quantos jogos o ${nomeTime} perdeu?`));//Number é uma forma de transformar string em número.
+
+        var  vitoriasRival = Number(prompt(`Quantos jogos o ${nomeTimeRival} venceu?`));//Number é uma forma de transformar string em número.
+        
+        var  empatesRival = parseInt(prompt(`Quantos jogos o ${nomeTimeRival} empatou?`));//parseInt é outra forma de transformar string em número.[
+
+        var  derrotasRival = Number(prompt(`Quantos jogos o ${nomeTimeRival} perdeu?`));//Number é uma forma de transformar string em número.
+        
+        var pontos = ((vitorias *3) + empates - derrotas);
+        
+        var pontosRival = ((vitoriasRival *3) + empatesRival - derrotasRival); 
+        
+        if (pontos> pontosRival){
+            mostra(`Podemos ver que o ${nomeTime} está melhor que o ${nomeTimeRival} esse ano.`);
+        }
+        if (pontos< pontosRival){
+            mostra(`Podemos ver que o ${nomeTimeRival} está melhor que o ${nomeTime} esse ano.`);
+        }
+        if (pontos==pontosRival){
+            mostra(`Podemos ver que o ${nomeTimeRival} está empatado com o ${nomeTime} esse ano.`);
+        }
+
+        mostra(`O ${nomeTime} fez ${pontos} pontos esse ano. Enquanto o ${nomeTimeRival} fez ${pontosRival} pontos esse ano.`);
+    </script>
+</body>
+</html>

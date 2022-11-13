@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<script>
+   
+    var nome = prompt ("Olá, qual o seu nome?");
+    var idade = prompt ("Quantos anos você tem?");
+
+    var calculaDiasDeVida = function(idade){
+        return idade*365;
+    }
+
+    var calculaBatidasDoCoracao = function(idade){
+        return idade*24*60*80
+    } 
+
+    document.write(`${nome}, isso significa que você já viveu  ${(calculaDiasDeVida(idade))} dias de vida.<br>`);
+
+    document.write (`E seu coração já bateu ${(calculaBatidasDoCoracao(calculaDiasDeVida(idade)))} vezes`);
+
+</script>
