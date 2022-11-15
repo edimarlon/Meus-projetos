@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<script>
+    var mostra = function(frase) {
+        document.write(frase +"<br>" );
+    }
+    
+    var nome = prompt("Olá,qual é o seu nome?");
+
+    var altura = prompt(`${nome}, qual é sua altura?`);
+    
+    var peso = prompt(`${nome}, qual é seu peso?`);
+
+    var imc = (Number(peso) / (Number(altura) * Number(altura))).toFixed(2)
+    
+    mostra (`Olá, ${nome}, seu imc é de ${imc}.`);
+
+    if (imc<18.5){
+        mostra (`Seu IMC indica que você está abaixo do peso.`);
+    }
+    if (imc>35){
+        mostra (`Seu IMC indica que você está acima do peso.`);
+    }
+    if (imc>=18.5 && imc<=35){ //No lugar de 2 if é possível usar o &&.
+        mostra (`OK! Seu IMC está certinho.`);
+    }
+
+
+</script>
