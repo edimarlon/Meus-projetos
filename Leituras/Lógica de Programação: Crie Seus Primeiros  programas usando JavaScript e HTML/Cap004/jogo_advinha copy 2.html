@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mostra = function(frase){
+            document.write (frase);
+            document.write ("<br>");
+        }
+
+        /*
+        criar função para simplificar o código!
+        */
+        var numeroPensadoPeloSistema = Math.random()*100; //Variável temporária. Recebe um número aleatório do sistema.
+        var numeroArredondado = Math.round (numeroPensadoPeloSistema); //Arredonda o número aleatório.
+               
+        var nome = prompt("Olá, qual o seu nome?")
+        alert(`${nome}, vamos brincar de "que número eu pensei"!`);
+        var chute = prompt("Já pensei. Qual você acha que é?")
+        var contador = 1;
+        while (chute!=numeroArredondado){
+           
+            if (isNaN(chute)) {
+            
+                alert(`Uau ${nome}! Você acertou, brincadeirinha! Tenta um número na próxima.`);
+            }
+            
+            contador ++; 
+
+            if(chute<numeroArredondado){
+            alert(`O seu número ${chute} tá quase lá.`);
+            }
+            
+            if(chute>numeroArredondado){
+            alert(`O seu número ${chute} passou do número que pensei.`);
+            }
+            
+            var chute = prompt("Diga outro número");
+
+            if(chute==numeroArredondado){
+            mostra(`Uau ${nome}! Você acertou na sua ${contador}ª tentativa, pois eu pensei no número ${numeroArredondado}.`);
+            }
+
+            
+        }
+
+        //if:Se
+        //else:Caso contrário
+        //while:Enquanto
+        //Math.random:volta um número aleatório de 0 a 10, fração inclusive
+        //Math.round: arredonda o número
+        
+    </script>
+</body>
+</html>
